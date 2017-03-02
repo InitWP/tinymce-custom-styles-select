@@ -1,0 +1,9 @@
+{
+	"name": "TinyMCE custom styles select",
+	"type": "module",
+	"version": "0.1.0",
+	"description": "Add the style selectbox containing custom styles to TinyMCE",
+	"files": [
+		"tinymce-custom-styles-select.php"
+    ]
+}
