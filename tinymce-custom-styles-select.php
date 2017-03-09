@@ -2,17 +2,17 @@
 /*
  * Add the style selectbox containing custom styles to TinyMCE
  */
-function TEXTDOMAIN_mce_styleselect($buttons) {
+function NAMESPACE_mce_styleselect($buttons) {
 	array_unshift($buttons, 'styleselect');
 	return $buttons;
 }
-add_filter('mce_buttons_2', 'TEXTDOMAIN_mce_styleselect');
+add_filter('mce_buttons_2', 'NAMESPACE_mce_styleselect');
 
 
 /*
  * Callback function to filter the MCE settings
  */
-function TEXTDOMAIN_insert_custom_styles( $init_array ) {
+function NAMESPACE_insert_custom_styles( $init_array ) {
 
 // Define the style_formats array
 	$style_formats = array(
@@ -39,4 +39,4 @@ function TEXTDOMAIN_insert_custom_styles( $init_array ) {
 
 }
 // Attach callback to 'tiny_mce_before_init'
-add_filter( 'tiny_mce_before_init', 'TEXTDOMAIN_insert_custom_styles' );
+add_filter( 'tiny_mce_before_init', 'NAMESPACE_insert_custom_styles' );
